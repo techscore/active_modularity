@@ -51,11 +51,11 @@ Or install it yourself as:
     
     # standard association
     person = Person.create
-    person.entries.build.class.name # Person
+    person.entries.build.class.name # Entry
     
     # inner module association
     admin_person = Admin::Person.create
-    admin_person.entries.build.class.name # Admin::Person
+    admin_person.entries.build.class.name # Admin::Entry
     
     
     #
@@ -94,16 +94,14 @@ Or install it yourself as:
     # app/models/admin/customer.rb
     module Admin
       class Customer < ::Customer
-        # include Admin::Person common code
-        include Person::Common
+        include Admin::Person::Common
       end
     end
     
     # app/models/admin/employee.rb
     module Admin
       class Employee < ::Employee
-        # include Admin::Person common code
-        include Person::Common
+        include Admin::Person::Common
       end
     end
     
