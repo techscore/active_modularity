@@ -6,8 +6,8 @@ require 'active_modularity/version'
 Gem::Specification.new do |spec|
   spec.name          = "active_modularity"
   spec.version       = ActiveModularity::VERSION
-  spec.authors       = ["yuki.teraoka"]
-  spec.email         = ["teraoka.yuki@synergy101.jp"]
+  spec.authors       = ["yuki teraoka"]
+  spec.email         = ["info@techscore.com"]
   spec.description   = %q{ActiveRecord model inheritance support by module.}
   spec.summary       = %q{ActiveRecord model inheritance support by module. Fix inner module association and single table inheritance.}
   spec.homepage      = "https://github.com/techscore/active_modularity"
