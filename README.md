@@ -125,6 +125,9 @@ Or install it yourself as:
     Admin::Person.find(alice.id).class.name # Admin::Customer
     Admin::Person.find(bob.id  ).class.name # Admin::Customer
 
+## Introductory articles
+
+* [techscore blog (in Japanese)](http://www.techscore.com/blog/2013/05/09/active_modularity/ "techscore")
 
 ## Contributing
 
