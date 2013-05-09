@@ -20,8 +20,12 @@ Or install it yourself as:
 ## Examples ##
 
     # config/initializers/acts_as_modurarity.rb
+    
     # enable active modurality
     ActiveRecord::Base.acts_as_modurality
+    
+    # load all files (Must be loaded the models and controllers.)
+    YourApp::Application.eager_load! unless Rails.configuration.cache_classes
     
     #
     # has many association
