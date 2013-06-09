@@ -33,16 +33,19 @@ module ActiveModularity
       
       # fix inner module sti base class
       def force_sti_base!
-        if ActiveRecord::Base != superclass &&
+        @@force_sti_base = true
+      end
+      
+      def descends_from_active_record?
+        if @@force_sti_base &&
+           ActiveRecord::Base != superclass &&
            !self.abstract_class? &&
            superclass.descends_from_active_record? &&
            superclass.name == name.demodulize &&
            columns_hash.include?(inheritance_column)
-          singleton_class.send(:define_method, :descends_from_active_record?) { true }
-          true
-        else
-          false
+          return true
         end
+        super
       end
       
       # fix inner module reflections
